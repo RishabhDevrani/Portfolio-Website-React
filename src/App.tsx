@@ -17,7 +17,7 @@ interface Skill {
 
 // --- DATA ---
 const userProfile = {
-    photo: "public/Image2.jpg",
+    photo: "/Image2.jpg",
     name: "Rishabh Devrani",
     title: "Full-Stack Developer & Tech Enthusiast",
     bio: "I’m passionate about building clean, scalable, and user-friendly web applications. I work mainly with the React ecosystem, JavaScript, and modern MERN stack technologies like Node.js, Express, and MongoDB. I enjoy writing clean code, improving performance, and learning new concepts that help me grow as a developer.I’m always curious to explore new tools, web technologies, and the latest developments in AI and distributed systems. I love contributing to meaningful projects and constantly improving my technical skills.",
