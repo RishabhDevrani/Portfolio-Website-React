@@ -1,0 +1,6 @@
+/* App specific styles can go here if needed, or keep it empty for now */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
