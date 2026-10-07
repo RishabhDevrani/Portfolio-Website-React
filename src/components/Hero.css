@@ -25,13 +25,21 @@
 }
 
 .hero-title {
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
-    background: linear-gradient(to right, #fff, #a5a5a5);
+    background: linear-gradient(to right, #ffffff, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: textShine 5s linear infinite;
+    background-size: 200% auto;
+}
+
+@keyframes textShine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .hero-role {
@@ -146,10 +154,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
     .hero-role {
         font-size: 1.8rem;
     }

@@ -1,17 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
 :root {
-  --bg-color: #0a0a0a;
-  --surface-color: #1a1a1a;
-  --primary-color: #00d4ff;
-  --secondary-color: #7000ff;
+  --bg-color: transparent;
+  --surface-color: rgba(255, 255, 255, 0.03);
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --primary-color: #f43f5e;
+  --secondary-color: #8b5cf6;
+  --tertiary-color: #3b82f6;
   --text-color: #ffffff;
-  --text-muted: #a3a3a3;
+  --text-muted: rgba(255, 255, 255, 0.7);
   --font-main: 'Outfit', sans-serif;
 
-  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--tertiary-color));
 
   scroll-behavior: smooth;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
 }
 
 * {
@@ -22,7 +41,9 @@
 
 body {
   font-family: var(--font-main);
-  background-color: var(--bg-color);
+  background: linear-gradient(-45deg, #0f172a, #4c1d95, #be123c, #1e3a8a, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   color: var(--text-color);
   min-height: 100vh;
   overflow-x: hidden;
