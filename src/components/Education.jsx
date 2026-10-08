@@ -27,11 +27,12 @@ const Education = () => {
                     transition={{ duration: 0.5 }}
                     className="section-header"
                 >
+                    <p className="section-kicker">02 — Journey</p>
                     <h2 className="section-title">Education</h2>
                     <div className="section-line"></div>
                 </motion.div>
 
-                <div className="education-content">
+                <div className="education-timeline">
                     {educationData.map((item, index) => (
                         <motion.div
                             key={index}

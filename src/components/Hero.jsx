@@ -6,17 +6,27 @@ const Hero = () => {
     return (
         <div id="home" className="hero-container">
             <div className="hero-content">
+                <motion.div
+                    initial={{ opacity: 0, y: -16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="hero-kicker"
+                >
+                    <span className="hero-kicker-dot"></span>
+                    Available for work
+                </motion.div>
+
                 <motion.p
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
                     className="hero-subtitle"
                 >
                     HELLO, I'M
                 </motion.p>
 
                 <motion.h1
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="hero-title"
@@ -27,7 +37,7 @@ const Hero = () => {
                 <motion.h2
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
+                    transition={{ duration: 0.5, delay: 0.35 }}
                     className="hero-role"
                 >
                     Creative <span className="highlight">Developer</span> & <span className="highlight">Designer</span>
@@ -36,7 +46,7 @@ const Hero = () => {
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                     className="hero-desc"
                 >
                     I build exceptional digital experiences that are fast, accessible, beautiful, and responsive.
@@ -45,7 +55,7 @@ const Hero = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
+                    transition={{ duration: 0.5, delay: 0.65 }}
                     className="hero-btns"
                 >
                     <a href="#projects" className="btn btn-primary">View My Work</a>
@@ -55,7 +65,7 @@ const Hero = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
                     className="social-icons"
                 >
                     <a href="https://github.com/RishabhDevrani" target="_blank" rel="noreferrer"><FaGithub /></a>

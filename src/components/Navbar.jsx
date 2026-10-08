@@ -21,30 +21,34 @@ const Navbar = () => {
     }, []);
 
     const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMenu = () => setIsOpen(false);
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
-                <Link to="/" className="navbar-logo">
-                    Portfolio<span className="dot">.</span>
+                <Link to="/" className="navbar-logo" onClick={closeMenu}>
+                    RD<span className="dot">.</span>
                 </Link>
 
-                <div className="menu-icon" onClick={toggleMenu}>
+                <button type="button" className="menu-icon" onClick={toggleMenu} aria-label="Toggle menu">
                     {isOpen ? <FaTimes /> : <FaBars />}
-                </div>
+                </button>
 
                 <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
                     <li className="nav-item">
-                        <a href="#home" className="nav-links" onClick={toggleMenu}>Home</a>
+                        <a href="#home" className="nav-links" onClick={closeMenu}>Home</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#about" className="nav-links" onClick={toggleMenu}>About</a>
+                        <a href="#about" className="nav-links" onClick={closeMenu}>About</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#projects" className="nav-links" onClick={toggleMenu}>Projects</a>
+                        <a href="#education" className="nav-links" onClick={closeMenu}>Education</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#contact" className="nav-links" onClick={toggleMenu}>Contact</a>
+                        <a href="#projects" className="nav-links" onClick={closeMenu}>Projects</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#contact" className="nav-links" onClick={closeMenu}>Contact</a>
                     </li>
                 </ul>
             </div>

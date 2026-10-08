@@ -61,6 +61,7 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="section-header"
         >
+          <p className="section-kicker">03 — Selected Work</p>
           <h2 className="section-title">My Projects</h2>
           <div className="section-line"></div>
           <p className="section-subtitle">
